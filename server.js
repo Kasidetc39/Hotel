@@ -2,7 +2,7 @@
 const { WebSocketServer } = require('ws');
 const wss = new WebSocketServer({ port: process.env.PORT || 8080, maxPayload: 16 * 1024 });
 const rooms = new Map();
-const KEYS = ['host', 'n', 's', 'x', 'z', 'c'];   // only these presence fields are relayed
+const KEYS = ['host', 'n', 's', 'x', 'z', 'c', 'fy'];   // only these presence fields are relayed
 let nextId = 1;
 
 wss.on('connection', (ws) => {
